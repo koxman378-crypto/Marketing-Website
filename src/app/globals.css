@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+  --font-merienda: var(--font-merienda);
+  --font-playfair-display: var(--font-playfair-display);
+}
+
+.geist-sans {
+  font-family: var(--font-geist-sans);
+}
+.merienda {
+  font-family: var(--font-merienda);
+}
+.geist-mono {
+  font-family: var(--font-geist-mono);
+} /* Lenis smooth scroll will handle scrolling */
+html.lenis {
+  height: auto;
+}
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Lenis smooth scroll will handle scrolling */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
